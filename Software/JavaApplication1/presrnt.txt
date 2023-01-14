@@ -1,0 +1,4 @@
+String sql2 ="Update  Fifthjan set  I =? where Stud_ID =   '"+jTextField1.getText()+"'";
+   pst=con.prepareStatement(sql2);
+      pst.setString(1,"p");
+pst.executeUpdate();

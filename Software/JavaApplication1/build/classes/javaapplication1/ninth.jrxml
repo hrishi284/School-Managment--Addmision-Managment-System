@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45901024-278c-41ab-85ec-6793e9a014fc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="PieChartDataset" uuid="030cdf57-1dfd-4597-a9b5-d583514932c7"/>
+	<subDataset name="New Dataset 1" uuid="526061a6-0156-4ca0-b4be-d2a542398c7b">
+		<queryString language="SQL">
+			<![CDATA[select * from fifth ;]]>
+		</queryString>
+		<field name="stud_fname" class="java.lang.String"/>
+		<field name="stud_lname" class="java.lang.String"/>
+		<field name="dob" class="java.lang.String"/>
+		<field name="mediam" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[select * from ninth;]]>
+	</queryString>
+	<field name="stud_ID" class="java.lang.String"/>
+	<field name="stud_fname" class="java.lang.String"/>
+	<field name="stud_lname" class="java.lang.String"/>
+	<field name="dob" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="contact" class="java.lang.String"/>
+	<field name="address1" class="java.lang.String"/>
+	<field name="address2" class="java.lang.String"/>
+	<field name="houseno" class="java.lang.String"/>
+	<field name="pincode" class="java.lang.String"/>
+	<field name="mediam" class="java.lang.String"/>
+	<field name="pic" class="java.lang.String"/>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-20" width="844" height="575" uuid="3de72434-97b4-4b0a-b85b-19db76edc919"/>
+				<imageExpression><![CDATA["C:\\Users\\Dell\\Downloads\\Blackboard.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="-62" y="65" width="449" height="29" forecolor="#FFFFFF" uuid="fa685340-fa9d-4995-bc31-7ba03a21060b"/>
+				<textElement textAlignment="Right">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ninth Class]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="21" width="227" height="44" forecolor="#FFFFFF" uuid="869e0007-902c-4d61-bda2-bff6a05989c4"/>
+				<textElement>
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[Report ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<frame>
+				<reportElement x="237" y="0" width="575" height="14" uuid="88bf08d2-9f93-4ad0-af72-b83fc0a9769d"/>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="201" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="4d88bd2c-48e3-4527-a5aa-95c465d25cbf"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Date of Birth]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" positionType="Float" x="344" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="0fdb1b80-4e17-4368-9423-aadf3392cb08"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+					</textElement>
+					<text><![CDATA[Mediam]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="152" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="e68679d1-c482-4091-a18a-50662fd38777"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="295" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="0bf39d12-2320-4ca4-a631-bfae3f5e1e78"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="6" width="87" height="14" forecolor="#FFFFFF" uuid="f5c8c94a-6b6d-4089-885e-000ad11a5752"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="68" y="14" width="575" height="1" forecolor="#FFFFFF" uuid="0a825402-6c87-4c89-bc84-01e382e2cfa8"/>
+			</line>
+			<frame>
+				<reportElement x="227" y="0" width="575" height="14" uuid="f8b18472-d194-455d-806d-dd9a9979e9fe"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="211" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="5975fcf1-19a1-481a-9747-bdb5a2d17ec5"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dob}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="Detail" positionType="Float" x="354" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="9b5cde3b-1fa0-463d-866a-7e74d7ee82be"/>
+					<textElement>
+						<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mediam}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="152" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="504ba213-ada2-4fb9-841a-7d9095ee700b"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stud_fname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="296" y="0" width="143" height="14" forecolor="#FFFFFF" uuid="b3c5a8ad-00a1-4eac-9a92-6928742c68f1"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stud_lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="4" width="100" height="14" forecolor="#FFFFFF" uuid="f089710c-beb7-496a-86ff-eaac0b51e670"/>
+				<textFieldExpression><![CDATA[$F{stud_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1d1e4ede-2b1c-47bd-bc2b-7c54611d42e3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
